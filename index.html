@@ -3,29 +3,392 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>N-Petkov Games</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #111;
-            color: #eee;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-        }
-        a { color: #00bcd4; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
+    <meta name="description" content="N. Petkov | Senior AI Controls & Robotics / ML Engineer">
+    <title>Nikola Petkov | Senior AI Engineer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>N. Petkov</h1>
-    <p>Independent Game Developer</p>
-    <br>
-    <p><a href="https://n-petkov.github.io/hex-arena-privacy/">Privacy Policy</a></p>
+    <div class="container">
+        <nav>
+            <div class="logo">N.Petkov</div>
+            <div class="nav-links">
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#expertise">Expertise</a>
+                <a href="#publications">Publications</a>
+                <a href="blog/hexy-devlog.html">Writings</a>
+            </div>
+        </nav>
+
+        <header class="hero">
+            <div class="hero-subtitle">Senior AI Controls & Robotics / ML Engineer</div>
+            <h1>Building adaptive intelligence and high-performance algorithms.</h1>
+            <p>I specialize in neuroplastic Adaptive Neural Controllers, Reinforcement Learning, and Neuroevolution. With over a decade of experience across fusion energy and industrial automation, I design tiny, robust AI systems for embedded deployment and edge computing.</p>
+            
+            <div class="contact-grid">
+                <a href="https://linkedin.com/in/petkovnikola" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    petkovnikola
+                </a>
+            </div>
+        </header>
+
+        <section id="projects">
+            <div class="section-header">
+                <h2>Featured & Past Projects</h2>
+            </div>
+            
+            <div class="project-card" style="margin-bottom: 3rem;">
+                <img src="assets/Hex images/feature-graphic.png" alt="HEX:RESISTANCE Gameplay" class="project-image">
+                <div class="project-content">
+                    <h3>HEX:RESISTANCE</h3>
+                    <div class="tag-container" style="margin-bottom: 1.5rem;">
+                        <span class="tag">AI Engine</span>
+                        <span class="tag">Minimax Algorithm</span>
+                        <span class="tag">Game Development</span>
+                    </div>
+                    <p>A strategic mobile game featuring a custom-built minimax AI engine. I engineered the opponent AI from scratch, optimizing alpha-beta pruning and heuristic evaluation to run smoothly on constrained mobile devices without native system crashes.</p>
+                    <a href="blog/hexy-devlog.html" class="btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <h3>MuZero RL Trading Agent</h3>
+                    <div class="tag-container" style="margin-bottom: 1rem;">
+                        <span class="tag">Deep RL</span>
+                        <span class="tag">MuZero</span>
+                        <span class="tag">Finance</span>
+                    </div>
+                    <p>Deep reinforcement learning agent for learning trading strategies based on MuZero for a pre-startup mini hedge-fund in the US. Huge potential for automated trading.</p>
+                </div>
+
+                <div class="expertise-card">
+                    <h3>Options Volatility Prognostics</h3>
+                    <div class="tag-container" style="margin-bottom: 1rem;">
+                        <span class="tag">Transformers</span>
+                        <span class="tag">TFT</span>
+                        <span class="tag">Time-series</span>
+                    </div>
+                    <p>Developed a solution using Temporal Fusion Transformers (TFT) for predicting future volatility of stock options, achieving a 64% win rate on validation datasets.</p>
+                </div>
+
+                <div class="expertise-card">
+                    <h3>Fusion Deployment Robotics</h3>
+                    <div class="tag-container" style="margin-bottom: 1rem;">
+                        <span class="tag">Generative Design</span>
+                        <span class="tag">Kinematics</span>
+                        <span class="tag">Simulation</span>
+                    </div>
+                    <p>Parametric and generative design of long reach manipulators at UKAEA, including custom physics engine implementation and topology/dimension synthesis.</p>
+                </div>
+
+                <div class="expertise-card">
+                    <h3>ITER VVPSS Control System</h3>
+                    <div class="tag-container" style="margin-bottom: 1rem;">
+                        <span class="tag">Control Systems</span>
+                        <span class="tag">Project Lifecycle</span>
+                    </div>
+                    <p>Managed and delivered the full project lifecycle for the control system of the ITER Vacuum Vessel Pressure Suppression System tooling.</p>
+                </div>
+
+                <div class="expertise-card">
+                    <h3>ESS Active Cells OPC-UA</h3>
+                    <div class="tag-container" style="margin-bottom: 1rem;">
+                        <span class="tag">C++</span>
+                        <span class="tag">OPC-UA</span>
+                        <span class="tag">EtherCAT</span>
+                    </div>
+                    <p>Developed an OS-agnostic OPC-UA client library and integrated EtherCAT drivers into the CorteX framework for the European Spallation Source.</p>
+                </div>
+
+                <div class="expertise-card">
+                    <h3>Automated Cocktail Machine</h3>
+                    <div class="tag-container" style="margin-bottom: 1rem;">
+                        <span class="tag">C# OPC DA</span>
+                        <span class="tag">PLC</span>
+                        <span class="tag">Robotics</span>
+                    </div>
+                    <p>Freelance project integrating a Yaskawa robot and Allen Bradley PLC to create a fully automated bartending machine for night clubs.</p>
+                </div>
+
+                <div class="expertise-card">
+                    <h3>4kW Subsea VSD</h3>
+                    <div class="tag-container" style="margin-bottom: 1rem;">
+                        <span class="tag">R&D</span>
+                        <span class="tag">Hardware Integration</span>
+                    </div>
+                    <p>R&D at Nebb on a subsea Variable Speed Drive (VSD) for Brushless DC Motors designed to operate at 3000m depths.</p>
+                </div>
+
+                <div class="expertise-card">
+                    <h3>Voith Paper Fabrics SCADA</h3>
+                    <div class="tag-container" style="margin-bottom: 1rem;">
+                        <span class="tag">SCADA</span>
+                        <span class="tag">MES Engine</span>
+                        <span class="tag">C# .NET</span>
+                    </div>
+                    <p>Designed and commissioned Wonderware and Citect SCADA systems across plants in Sweden and the USA, integrating with Nebb's Process Pilot MES.</p>
+                </div>
+
+                <div class="expertise-card">
+                    <h3>Yaskawa Nx100 Interface</h3>
+                    <div class="tag-container" style="margin-bottom: 1rem;">
+                        <span class="tag">Robotics</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                    <p>Created an interface at Johnson Matthey for 16 Yaskawa robots to receive recipe parameters directly from the PLC/SCADA, drastically cutting setup time.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="section-header">
+                <h2>Experience</h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">May 2025 – Present</span>
+                    <h3 class="timeline-title">Senior AI Controls Engineer</h3>
+                    <div class="timeline-company">Luffy AI</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Developing and deploying Adaptive Neural Controllers (ANC/ANS) based on neuroevolution and neuroplastic neural networks for real-time control of motors, drones, and industrial assets.</li>
+                            <li>Targeting extremely compact, high-intelligence-per-kB controllers suitable for embedded and edge hardware.</li>
+                            <li>Leading system identification, training, verification, and testing using digital twins, domain randomisation, and multi-scenario simulation.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">Nov 2021 – Apr 2025</span>
+                    <h3 class="timeline-title">Senior Robotics Research Engineer</h3>
+                    <div class="timeline-company">United Kingdom Atomic Energy Authority (UKAEA)</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Led research on rapid concept design of long-reach remote maintenance manipulators for fusion and constrained environments.</li>
+                            <li>Designed and implemented a custom physics and kinematics engine to simulate long-reach serial robots, moving from manual design to search-driven concept exploration using MuZero, MCTS, GA, and PSO.</li>
+                            <li>Shaped the Deployment Robotics research topic within the Magnetic Fusion Research Programme.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">Sep 2022 – Jan 2024</span>
+                    <h3 class="timeline-title">Machine Learning Engineer</h3>
+                    <div class="timeline-company">Quantitative Trading (Freelance)</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Built a Temporal Fusion Transformer (TFT) pipeline to predict stock option volatility, achieving ~64% win rate on validation.</li>
+                            <li>Integrated TFT into a MuZero-style trading agent, learning policies directly from noisy market data via multi-process data generation and training pipelines.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">Mar 2019 – Mar 2022</span>
+                    <h3 class="timeline-title">EUROfusion Engineering Grant Fellow</h3>
+                    <div class="timeline-company">EUROfusion / DEMO Remote Maintenance</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Awarded a EUR 250k grant to develop condition monitoring and prognostics methods for the DEMO fusion power plant.</li>
+                            <li>Designed unsupervised and self-supervised ML approaches (adversarial autoencoders, InfoGAN, Transformers) for anomaly detection and degradation tracking with biased data.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">Nov 2017 – Nov 2021</span>
+                    <h3 class="timeline-title">Control Systems Software Engineer</h3>
+                    <div class="timeline-company">UKAEA - RACE</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Led the ITER Vacuum Vessel Pressure Suppression System (VPSS) tooling control system through design, implementation and integration.</li>
+                            <li>Developed an OS-agnostic OPC-UA client C++ library and integrated a Hilscher EtherCAT driver for the European Spallation Source (ESS) Active Cells project.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">Apr 2013 – Oct 2017</span>
+                    <h3 class="timeline-title">Automation Software & PLC Engineer</h3>
+                    <div class="timeline-company">Nebb Solutions / Johnson Matthey</div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Developed and commissioned SCADA systems (Wonderware, Citect) for offshore, energy, and high-volume manufacturing environments.</li>
+                            <li>Reduced automation-related downtime from ~10% to ~0.7% per month by redesigning critical PLC logic.</li>
+                            <li>Developed SCADA interfaces for Yaskawa Nx100 robot parameter downloads, improving changeover efficiency.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <div class="section-header">
+                <h2>Education</h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">2019 – 2025</span>
+                    <h3 class="timeline-title">PhD in Intelligent Machines / Machine Health Monitoring</h3>
+                    <div class="timeline-company">Lappeenranta University of Technology (LUT), Finland</div>
+                    <div class="timeline-content">
+                        <p>Research and development of novel Unsupervised Machine Learning techniques for Machine Health Estimation and Prognostics applied on the DEMO future fusion power plant.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">2013 – 2017</span>
+                    <h3 class="timeline-title">MSc in Automation, Robotics and Systems Engineering</h3>
+                    <div class="timeline-company">Sts. Cyril and Methodius University (FEEIT), Macedonia</div>
+                    <div class="timeline-content">
+                        <p>Thesis: Sensor fusion of Inertial sensors and Global Positioning System using an Extended Kalman Filter on a custom mobile platform (Arduino + BeagleBone Black, Ubuntu).</p>
+                        <div class="tag-container" style="margin-top: 1rem;">
+                            <a href="https://www.youtube.com/watch?v=VLtQT0gD0Lc" target="_blank" rel="noopener noreferrer" class="pub-link" style="margin-right: 1.5rem;">
+                                Video Demo
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
+                            <a href="https://1drv.ms/f/s!Ar3a5r5bEkKdgcE072aba8MkSEed5Q" target="_blank" rel="noopener noreferrer" class="pub-link">
+                                Thesis Documents
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">2009 – 2013</span>
+                    <h3 class="timeline-title">BSc in Computer Systems Engineering and Automation</h3>
+                    <div class="timeline-company">Sts. Cyril and Methodius University (FEEIT), Macedonia</div>
+                    <div class="timeline-content">
+                        <p>Graduation project: Algorithm for 2D terrain mapping using a single smartphone camera on a mobile robotic vehicle, combining frame-to-frame triangulation and encoder odometry.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="expertise">
+            <div class="section-header">
+                <h2>Expertise & Skills</h2>
+            </div>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <h3>Adaptive AI Control</h3>
+                    <p>Building neuroplastic, neuroevolution-based Adaptive Neural Controllers (ANC). Crafting tiny AI fibres for embedded control, digital twins, and real-time domain randomisation.</p>
+                    <div class="tag-container">
+                        <span class="tag">System ID</span>
+                        <span class="tag">Edge AI</span>
+                        <span class="tag">Digital Twins</span>
+                    </div>
+                </div>
+                <div class="expertise-card">
+                    <h3>Machine Learning & AI</h3>
+                    <p>Deep learning for anomaly detection and prognostics using CNN, LSTM, ResNet, and Transformers. Specialized in unsupervised and self-supervised learning methods.</p>
+                    <div class="tag-container">
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">Adversarial Autoencoders</span>
+                        <span class="tag">GANs</span>
+                    </div>
+                </div>
+                <div class="expertise-card">
+                    <h3>RL & Neuroevolution</h3>
+                    <p>Developing reinforcement learning agents and search-based planning algorithms for robotics and quantitative trading applications.</p>
+                    <div class="tag-container">
+                        <span class="tag">MuZero</span>
+                        <span class="tag">MCTS</span>
+                        <span class="tag">Genetic Algorithms</span>
+                        <span class="tag">RRT</span>
+                    </div>
+                </div>
+                <div class="expertise-card">
+                    <h3>Robotics & Industrial Systems</h3>
+                    <p>Long-reach manipulator concept design, kinematics, and constrained workspaces for fusion reactors. Deep industrial automation experience.</p>
+                    <div class="tag-container">
+                        <span class="tag">NVIDIA Isaac Sim</span>
+                        <span class="tag">PLC/SCADA</span>
+                        <span class="tag">C/C++</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications">
+            <div class="section-header">
+                <h2>Selected Publications</h2>
+            </div>
+            <div class="pub-list">
+                <div class="pub-item">
+                    <span class="pub-year">2025</span>
+                    <h3 class="pub-title">A Kinematics Optimization Framework with Improved Computational Efficiency for Task-Based Optimum Design of Serial Manipulators in Cluttered Environments</h3>
+                    <p class="pub-venue" style="margin-bottom: 0.5rem; font-weight: 500; color: #fff;">N. Petkov, O. Tokatli, K. Zhang, H. Wu and R. Skilton</p>
+                    <p class="pub-venue" style="margin-bottom: 1rem;">2025 IEEE International Conference on Robotics and Automation (ICRA), Atlanta, GA, USA</p>
+                    <div class="tag-container" style="margin-bottom: 1.5rem;">
+                        <span class="tag">Kinematics</span>
+                        <span class="tag">Motion Planning</span>
+                        <span class="tag">Optimization</span>
+                        <span class="tag">Computational Efficiency</span>
+                    </div>
+                    <a href="https://ieeexplore.ieee.org/document/11128345" target="_blank" rel="noopener noreferrer" class="pub-link">
+                        Read on IEEE Xplore
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2020</span>
+                    <h3 class="pub-title">Remote handling strategy and prototype tooling of the ITER vacuum vessel pressure suppression system bleed line valve assembly and rupture disk assembly</h3>
+                    <p class="pub-venue" style="margin-bottom: 0.5rem; font-weight: 500; color: #fff;">Keelan Keogh, Chang-Hwan Choi, David Cooper, Steven Craig, David Hamilton, Stewart Hockley, James Kent, Chris Lamb, Nikola Petkov, Andrew Robbins, Paul Talbot</p>
+                    <p class="pub-venue" style="margin-bottom: 1rem;">Fusion Engineering and Design, Volume 153, 111485</p>
+                    <p class="pub-venue" style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;"><strong>Abstract:</strong> As part of the development work performed under the ITER Robotic Test Facility (IRTF) program, development and substantiation of the maintenance strategy for the Vacuum Vessel Pressure Suppression System (VVPSS) must be investigated... During removal the confinement function of vessel must be retained. The remote handling of these components while maintaining the first confinement boundary is challenging due to the access restrictions. To understand and develop the strategy, prototype tooling in a mock-up environment has been created.</p>
+                    <div class="tag-container" style="margin-bottom: 1.5rem;">
+                        <span class="tag">Remote handling</span>
+                        <span class="tag">ITER</span>
+                        <span class="tag">Maintenance</span>
+                        <span class="tag">VVPSS</span>
+                    </div>
+                    <a href="https://doi.org/10.1016/j.fusengdes.2020.111485" target="_blank" rel="noopener noreferrer" class="pub-link">
+                        Read on ScienceDirect
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2023</span>
+                    <h3 class="pub-title">Towards rapid concept design of long-reach remote maintenance manipulators using Monte Carlo Tree Search neural networks</h3>
+                    <p class="pub-venue">Poster J-588 at SOFE 2023</p>
+                    <a href="https://sofe2023.co.uk/posters/" target="_blank" rel="noopener noreferrer" class="pub-link">
+                        View Poster Listing
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2022</span>
+                    <h3 class="pub-title">Self-supervised deep representation learning adversarial autoencoder: Deep domain adaptation for data-based fault diagnostics</h3>
+                    <p class="pub-venue">UKAEA preprint UKAEA-RACE-PR(23)03, submitted to IEEE Transactions on Pattern Analysis and Machine Intelligence</p>
+                    <a href="#" class="pub-link">
+                        UKAEA Scientific Publications
+                    </a>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2020</span>
+                    <h3 class="pub-title">Cost-benefit analysis of condition monitoring on DEMO remote maintenance system</h3>
+                    <p class="pub-venue">Fusion Engineering and Design 160</p>
+                    <a href="https://doi.org/10.1016/j.fusengdes.2020.112022" target="_blank" rel="noopener noreferrer" class="pub-link">
+                        Read Publication
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <span>&copy; 2026 Nikola Petkov. All rights reserved.</span>
+                <a href="/hex-arena-privacy/">Privacy Policy (HEX:RESISTANCE)</a>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
-
