@@ -25,28 +25,25 @@
         <article class="blog-content">
             <img src="../assets/Hex%20images/feature-graphic.png" alt="HEX:RESISTANCE Feature Graphic" style="width: 100%; border-radius: 8px; margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
             
-            <p>I'm thrilled to announce that <strong>HEX:RESISTANCE</strong> is now officially live on the Google Play Store! Building this game has been a journey spanning over a decade, representing a full-circle moment in my software engineering and artificial intelligence career.</p>
+            <p>I'm thrilled to announce that <strong>HEX:RESISTANCE</strong> is now officially live on the Google Play Store! Building this game has been a masterclass in modern AI engineering, allowing me to merge classical search algorithms with cutting-edge LLM development workflows.</p>
 
-            <h2>The Origins: 2011</h2>
-            <p>The story of HEX:RESISTANCE begins back in 2011 during my university years. That year marked a milestone in online education: Andrew Ng and Sebastian Thrun offered their groundbreaking AI and Machine Learning classes online for the very first time. Taking both of these courses—one deeply focused on Machine Learning and the other on core AI concepts like search techniques—served as my first real deep dive into the field of Artificial Intelligence.</p>
+            <h2>Engineering the AI Opponent</h2>
+            <p>Standard state-machine logic wasn't going to cut it for a hex-based strategy game; the state space is simply too massive and deterministic patterns become obvious. To provide a deeply challenging and dynamic opponent, I engineered a custom Minimax algorithm equipped with Alpha-Beta pruning.</p>
 
-            <p>Armed with these new concepts, I entered a game development competition for Windows Phone later that same year. I developed the initial iteration of the game, then called "Hexy," using C# and Silverlight. To build the game's opponent, I applied the exact algorithms I was studying: Minimax, Depth-First Search (DFS), Breadth-First Search (BFS), and other classical AI techniques. It was a massive learning experience, blending theoretical algorithms with practical game engine constraints.</p>
-
-            <h2>The Lost Years and the Window of Opportunity</h2>
-            <p>As the years passed, the mobile landscape shifted drastically. Windows Phone eventually became obsolete, taking the original Hexy down with it. I always harbored the idea of rebuilding the game for Android, but between demanding professional commitments and other projects, finding the time was nearly impossible.</p>
+            <p>Deploying computationally expensive search trees on mobile devices is notoriously difficult. Deep recursive evaluations rapidly drain battery life, block the main UI thread, and trigger native Out-Of-Memory (OOM) crashes due to excessive object allocation during the search.</p>
 
             <div style="display: flex; gap: 4%; margin-bottom: 2rem;">
                 <img src="../assets/Hex%20images/gameplay/playstore_ready/3.jpg" alt="HEX:RESISTANCE Gameplay Screenshot" style="width: 48%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                 <img src="../assets/Hex%20images/gameplay/playstore_ready/4.jpg" alt="HEX:RESISTANCE Gameplay Screenshot" style="width: 48%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
             </div>
 
-            <p>Recently, however, the unprecedented advancements in generative AI presented a unique window of opportunity. Leveraging these cutting-edge tools, I was finally able to bring this long-standing project back to life. For the game's design, I utilized Google's Antigravity (Claude) to iterate on UI/UX concepts and visual styling. For the core engineering and refactoring, I paired with Codex (OpenAI) as a development assistant to accelerate the implementation and fully optimize the custom Minimax engine for modern Android hardware.</p>
+            <h2>Accelerated by Generative AI</h2>
+            <p>To overcome these severe hardware constraints quickly, I heavily leveraged generative AI tools. Acting as the architect, I utilized Google's Antigravity (Claude) as my UI/UX designer and Codex (OpenAI) as my engineering co-pilot. This allowed me to rapidly refactor the engine's state representation—eliminating object allocation entirely with in-place board mutations—and offload the intensive computation safely.</p>
 
-            <h2>A Modern Implementation</h2>
-            <p>This hybrid approach to development allowed me to completely re-engineer and improve the game in just about two months. Standard state-machine AI wasn't going to cut it for a hex-based strategy game; the state space was too vast. By returning to my roots with a custom-built Minimax algorithm equipped with Alpha-Beta pruning—now highly optimized to run without native Out-Of-Memory (OOM) crashes on modern mobile processors—the game offers a deeply challenging and dynamic opponent.</p>
+            <p>This hybrid approach to AI engineering allowed me to completely build, optimize, and ship the game in just about two months.</p>
 
             <h2>Give It a Go!</h2>
-            <p>Releasing HEX:RESISTANCE has been incredibly rewarding. If you're interested in AI, strategy games, or just want to try out a challenging mobile puzzle, I invite you to give it a go.</p>
+            <p>Releasing HEX:RESISTANCE has been incredibly rewarding. If you're interested in AI, strategy games, or just want to try out a challenging mobile puzzle against a highly-optimized Minimax agent, I invite you to give it a go.</p>
             
             <div style="text-align: center; margin: 3rem 0;">
                 <a href="https://play.google.com/store/apps/details?id=com.hexresistance.app&amp;pcampaignid=web_share" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: var(--accent-color); color: #ffffff; font-weight: bold; font-size: 1.2rem; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4); transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(59, 130, 246, 0.6)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(59, 130, 246, 0.4)';">
