@@ -18,54 +18,37 @@
         </a>
 
         <header class="blog-header">
-            <span class="blog-meta">May 6, 2026 &middot; 8 min read &middot; Artificial Intelligence</span>
-            <h1 class="blog-title">Building a Custom Minimax AI Engine for Mobile: A HEX:RESISTANCE Post-Mortem</h1>
+            <span class="blog-meta">May 11, 2026 &middot; 5 min read &middot; Game Development &amp; AI</span>
+            <h1 class="blog-title">Building a Custom AI Engine for Mobile: The Story Behind HEX:RESISTANCE</h1>
         </header>
 
         <article class="blog-content">
-            <p>When I set out to build <em>HEX:RESISTANCE</em>, I knew the core game loop relied heavily on a challenging, dynamic opponent. Standard state-machine AI wasn't going to cut it for a hex-based strategy game; the state space was too vast, and players would quickly identify deterministic patterns. I needed a robust adversarial search algorithm.</p>
+            <img src="../assets/Hex images/feature-graphic.png" alt="HEX:RESISTANCE Feature Graphic" style="width: 100%; border-radius: 8px; margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
             
-            <p>I decided to implement a custom Minimax algorithm equipped with Alpha-Beta pruning. However, deploying computationally expensive search trees on mobile devices presented significant challenges, culminating in severe native system crashes due to memory pressure and main-thread blocking.</p>
+            <p>I'm thrilled to announce that <strong>HEX:RESISTANCE</strong> is now officially live on the Google Play Store! Building this game has been a journey spanning over a decade, representing a full-circle moment in my software engineering and artificial intelligence career.</p>
 
-            <h2>The State Space Problem</h2>
-            <p>In a hex-based grid, the branching factor can explode exponentially depending on the board size. A naive implementation of Minimax would attempt to evaluate millions of states per turn. On a mobile processor, this drained the battery rapidly and caused the UI to freeze.</p>
+            <h2>The Origins: 2011</h2>
+            <p>The story of HEX:RESISTANCE begins back in 2011 during my university years. That year marked a milestone in online education: Andrew Ng and Sebastian Thrun offered their groundbreaking AI and Machine Learning classes online for the very first time. Taking both of these courses—one deeply focused on Machine Learning and the other on core AI concepts like search techniques—served as my first real deep dive into the field of Artificial Intelligence.</p>
 
-            <pre><code>// Example of an unoptimized evaluation function
-function evaluateState(boardState) {
-    let score = 0;
-    for (const hex of boardState.hexes) {
-        if (hex.owner === AI_PLAYER) score += hex.value;
-        if (hex.owner === HUMAN_PLAYER) score -= hex.value;
-    }
-    return score;
-}</code></pre>
+            <p>Armed with these new concepts, I entered a game development competition for Windows Phone later that same year. I developed the initial iteration of the game, then called "Hexy," using C# and Silverlight. To build the game's opponent, I applied the exact algorithms I was studying: Minimax, Depth-First Search (DFS), Breadth-First Search (BFS), and other classical AI techniques. It was a massive learning experience, blending theoretical algorithms with practical game engine constraints.</p>
 
-            <p>While this naive approach works in theory, applying it at depth 6 or 7 on a mobile device immediately caused a timeout. The first optimization was introducing <strong>Iterative Deepening</strong> alongside Alpha-Beta pruning, ensuring we always had a "good enough" move ready if our allowed time budget ran out before the search concluded.</p>
+            <h2>The Lost Years and the Window of Opportunity</h2>
+            <p>As the years passed, the mobile landscape shifted drastically. Windows Phone eventually became obsolete, taking the original Hexy down with it. I always harbored the idea of rebuilding the game for Android, but between demanding professional commitments and other projects, finding the time was nearly impossible.</p>
 
-            <h2>Solving Native System Crashes</h2>
-            <p>The most critical issue arose during late-game scenarios. The garbage collector simply couldn't keep up with the allocation of new board state objects during the deep recursive search. This excessive object creation led to Out-Of-Memory (OOM) native crashes.</p>
+            <div style="display: flex; gap: 4%; margin-bottom: 2rem;">
+                <img src="../assets/Hex images/_gameplay/playstore_ready/3.jpg" alt="HEX:RESISTANCE Gameplay Screenshot" style="width: 48%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <img src="../assets/Hex images/_gameplay/playstore_ready/4.jpg" alt="HEX:RESISTANCE Gameplay Screenshot" style="width: 48%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            </div>
 
-            <p>The solution was to eliminate object allocation during the search entirely. I refactored the engine to use a single, pre-allocated flat array representing the board. Instead of cloning the board for each potential move, the engine now applied and reverted moves <em>in-place</em> (a standard technique in modern chess engines).</p>
+            <p>Recently, however, the unprecedented advancements in generative AI presented a unique window of opportunity. Leveraging these cutting-edge tools, I was finally able to bring this long-standing project back to life. For the game's design, I utilized Google's Antigravity (Claude) to iterate on UI/UX concepts and visual styling. For the core engineering and refactoring, I paired with Codex (OpenAI) as a development assistant to accelerate the implementation and fully optimize the custom Minimax engine for modern Android hardware.</p>
 
-            <pre><code>// Optimized in-place move application
-function minimax(depth, alpha, beta, isMaximizing) {
-    if (depth === 0) return evaluateState(board);
-    
-    let moves = generateMoves(board);
-    
-    for (const move of moves) {
-        applyMove(board, move); // Mutate existing board
-        let eval = minimax(depth - 1, alpha, beta, !isMaximizing);
-        revertMove(board, move); // Revert mutation to cleanly step back
-        
-        // Alpha-beta pruning logic...
-    }
-}</code></pre>
+            <h2>A Modern Implementation</h2>
+            <p>This hybrid approach to development allowed me to completely re-engineer and improve the game in just about two months. Standard state-machine AI wasn't going to cut it for a hex-based strategy game; the state space was too vast. By returning to my roots with a custom-built Minimax algorithm equipped with Alpha-Beta pruning—now highly optimized to run without native Out-Of-Memory (OOM) crashes on modern mobile processors—the game offers a deeply challenging and dynamic opponent.</p>
 
-            <h2>Conclusion</h2>
-            <p>By heavily optimizing the state representation and moving the intense computation off the main thread via Web Workers, the AI engine now evaluates states efficiently without dropping frames. Building the engine from scratch provided a deep understanding of resource management and adversarial search algorithms on constrained hardware.</p>
-
-            <p><em>HEX:RESISTANCE</em> is now live, and the AI opponent provides a fluid, challenging experience for players.</p>
+            <h2>Give It a Go!</h2>
+            <p>Releasing HEX:RESISTANCE has been incredibly rewarding. If you're interested in AI, strategy games, or just want to try out a challenging mobile puzzle, I invite you to give it a go. You can download it directly from the Google Play Store.</p>
+            
+            <p><strong>Let me know what you think in the comments below!</strong> Every piece of feedback, whether on the gameplay loop or the AI difficulty, is hugely appreciated as I continue to refine the experience.</p>
         </article>
 
         <section class="comments-section" style="margin-top: 4rem; border-top: none; padding-top: 0;">
