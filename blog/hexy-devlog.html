@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Building the Minimax AI Engine for HEX:RESISTANCE">
-    <title>Post-Mortem: HEX:RESISTANCE AI Engine | Nikola Petkov</title>
+    <title>The Story Behind HEX:RESISTANCE | Nikola Petkov</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -23,7 +23,7 @@
         </header>
 
         <article class="blog-content">
-            <img src="../assets/Hex images/feature-graphic.png" alt="HEX:RESISTANCE Feature Graphic" style="width: 100%; border-radius: 8px; margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <img src="../assets/Hex%20images/feature-graphic.png" alt="HEX:RESISTANCE Feature Graphic" style="width: 100%; border-radius: 8px; margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
             
             <p>I'm thrilled to announce that <strong>HEX:RESISTANCE</strong> is now officially live on the Google Play Store! Building this game has been a journey spanning over a decade, representing a full-circle moment in my software engineering and artificial intelligence career.</p>
 
@@ -36,8 +36,8 @@
             <p>As the years passed, the mobile landscape shifted drastically. Windows Phone eventually became obsolete, taking the original Hexy down with it. I always harbored the idea of rebuilding the game for Android, but between demanding professional commitments and other projects, finding the time was nearly impossible.</p>
 
             <div style="display: flex; gap: 4%; margin-bottom: 2rem;">
-                <img src="../assets/Hex images/_gameplay/playstore_ready/3.jpg" alt="HEX:RESISTANCE Gameplay Screenshot" style="width: 48%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                <img src="../assets/Hex images/_gameplay/playstore_ready/4.jpg" alt="HEX:RESISTANCE Gameplay Screenshot" style="width: 48%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <img src="../assets/Hex%20images/_gameplay/playstore_ready/3.jpg" alt="HEX:RESISTANCE Gameplay Screenshot" style="width: 48%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <img src="../assets/Hex%20images/_gameplay/playstore_ready/4.jpg" alt="HEX:RESISTANCE Gameplay Screenshot" style="width: 48%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
             </div>
 
             <p>Recently, however, the unprecedented advancements in generative AI presented a unique window of opportunity. Leveraging these cutting-edge tools, I was finally able to bring this long-standing project back to life. For the game's design, I utilized Google's Antigravity (Claude) to iterate on UI/UX concepts and visual styling. For the core engineering and refactoring, I paired with Codex (OpenAI) as a development assistant to accelerate the implementation and fully optimize the custom Minimax engine for modern Android hardware.</p>
@@ -46,8 +46,14 @@
             <p>This hybrid approach to development allowed me to completely re-engineer and improve the game in just about two months. Standard state-machine AI wasn't going to cut it for a hex-based strategy game; the state space was too vast. By returning to my roots with a custom-built Minimax algorithm equipped with Alpha-Beta pruning—now highly optimized to run without native Out-Of-Memory (OOM) crashes on modern mobile processors—the game offers a deeply challenging and dynamic opponent.</p>
 
             <h2>Give It a Go!</h2>
-            <p>Releasing HEX:RESISTANCE has been incredibly rewarding. If you're interested in AI, strategy games, or just want to try out a challenging mobile puzzle, I invite you to give it a go. You can download it directly from the Google Play Store.</p>
+            <p>Releasing HEX:RESISTANCE has been incredibly rewarding. If you're interested in AI, strategy games, or just want to try out a challenging mobile puzzle, I invite you to give it a go.</p>
             
+            <div style="text-align: center; margin: 3rem 0;">
+                <a href="https://play.google.com/store/apps/details?id=com.hexresistance.app&amp;pcampaignid=web_share" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: var(--accent-color); color: #ffffff; font-weight: bold; font-size: 1.2rem; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4); transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(59, 130, 246, 0.6)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(59, 130, 246, 0.4)';">
+                    GET IT ON GOOGLE PLAY
+                </a>
+            </div>
+
             <p><strong>Let me know what you think in the comments below!</strong> Every piece of feedback, whether on the gameplay loop or the AI difficulty, is hugely appreciated as I continue to refine the experience.</p>
         </article>
 
