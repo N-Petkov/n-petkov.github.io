@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Building the Minimax AI Engine for HEX:RESISTANCE">
-    <title>The Story Behind HEX:RESISTANCE | Nikola Petkov</title>
+    <meta name="description" content="Building the Minimax AI Engine for HEX:ARENA">
+    <title>The Story Behind HEX:ARENA | Nikola Petkov</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
 
         <header class="blog-header">
             <span class="blog-meta">May 11, 2026 &middot; 5 min read &middot; Game Development &amp; AI</span>
-            <h1 class="blog-title" style="margin-bottom: 1.5rem;">Building a Custom AI Engine for Mobile: The Story Behind HEX:RESISTANCE</h1>
+            <h1 class="blog-title" style="margin-bottom: 1.5rem;">Building a Custom AI Engine for Mobile: The Story Behind HEX:ARENA</h1>
             <div style="text-align: left;">
                 <a href="https://play.google.com/store/apps/details?id=com.hexresistance.app&amp;pcampaignid=web_share" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: var(--accent-color); color: #ffffff; font-weight: bold; font-size: 1.1rem; padding: 0.8rem 2rem; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4); transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(59, 130, 246, 0.6)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(59, 130, 246, 0.4)';">
                     GET IT ON GOOGLE PLAY
@@ -28,9 +28,9 @@
         </header>
 
         <article class="blog-content">
-            <img src="../assets/Hex%20images/feature-graphic.png" alt="HEX:RESISTANCE Feature Graphic" style="width: 100%; border-radius: 8px; margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <img src="../assets/Hex%20images/feature-graphic.png" alt="HEX:ARENA Feature Graphic" style="width: 100%; border-radius: 8px; margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
             
-            <p>I'm thrilled to announce that <strong>HEX:RESISTANCE</strong> is now officially live on the Google Play Store! Building this game has been a masterclass in modern AI engineering, allowing me to merge classical search algorithms with cutting-edge LLM development workflows.</p>
+            <p>I'm thrilled to announce that <strong>HEX:ARENA</strong> is now officially live on the Google Play Store! As an AI engineer, building this game gave me the perfect opportunity to merge classical search algorithms with modern LLM-assisted development workflows.</p>
 
             <h2>Engineering the AI Opponent</h2>
             <p>Standard state-machine logic wasn't going to cut it for a hex-based strategy game; the state space is simply too massive and deterministic patterns become obvious. To provide a deeply challenging and dynamic opponent, I engineered a custom Minimax algorithm equipped with Alpha-Beta pruning.</p>
@@ -38,17 +38,17 @@
             <p>Deploying computationally expensive search trees on mobile devices is notoriously difficult. Deep recursive evaluations rapidly drain battery life, block the main UI thread, and trigger native Out-Of-Memory (OOM) crashes due to excessive object allocation during the search.</p>
 
             <div style="display: flex; gap: 4%; margin-bottom: 2rem;">
-                <img src="../assets/Hex%20images/gameplay/playstore_ready/3.jpg" alt="HEX:RESISTANCE Gameplay Screenshot" style="width: 48%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                <img src="../assets/Hex%20images/gameplay/playstore_ready/4.jpg" alt="HEX:RESISTANCE Gameplay Screenshot" style="width: 48%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <img src="../assets/Hex%20images/gameplay/playstore_ready/3.jpg" alt="HEX:ARENA Gameplay Screenshot" style="width: 48%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <img src="../assets/Hex%20images/gameplay/playstore_ready/4.jpg" alt="HEX:ARENA Gameplay Screenshot" style="width: 48%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
             </div>
 
             <h2>Accelerated by Generative AI</h2>
-            <p>To overcome these severe hardware constraints quickly, I heavily leveraged generative AI tools. Acting as the architect, I utilized Google's Antigravity (Claude) as my UI/UX designer and Codex (OpenAI) as my engineering co-pilot. This allowed me to rapidly refactor the engine's state representation—eliminating object allocation entirely with in-place board mutations—and offload the intensive computation safely.</p>
+            <p>To overcome these hardware constraints and accelerate development, I leveraged generative AI tools as my co-pilots. I used Google's Antigravity (Claude) to iterate on UI/UX design, and Codex (OpenAI) to assist with the core engineering. This workflow allowed me to rapidly refactor the engine's state representation—eliminating object allocation entirely with in-place board mutations—and offload the intensive computation safely.</p>
 
-            <p>This hybrid approach to AI engineering allowed me to completely build, optimize, and ship the game in just about two months.</p>
+            <p>This AI-assisted engineering approach allowed me to build, optimize, and ship the entire game in just two months.</p>
 
             <h2>Give It a Go!</h2>
-            <p>Releasing HEX:RESISTANCE has been incredibly rewarding. If you're interested in AI, strategy games, or just want to try out a challenging mobile puzzle against a highly-optimized Minimax agent, I invite you to give it a go.</p>
+            <p>Releasing HEX:ARENA has been incredibly rewarding. If you're interested in AI, strategy games, or just want to try out a challenging mobile puzzle against a highly-optimized Minimax agent, I invite you to give it a go.</p>
             
             <div style="text-align: center; margin: 3rem 0;">
                 <a href="https://play.google.com/store/apps/details?id=com.hexresistance.app&amp;pcampaignid=web_share" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: var(--accent-color); color: #ffffff; font-weight: bold; font-size: 1.2rem; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4); transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(59, 130, 246, 0.6)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(59, 130, 246, 0.4)';">
